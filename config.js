@@ -1,0 +1,1 @@
+export const TIMEFRAME = 5;   // change to 15 later
