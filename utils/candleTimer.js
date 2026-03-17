@@ -38,28 +38,33 @@ import { TIMEFRAME } from "../config.js";
 
 export function getNextRun() {
 
+  // ✅ Force IST time
   const now = new Date();
-  const next = new Date(now);
+  const istNow = new Date(
+    now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
+  );
 
-  const marketOpen = new Date(now);
+  const next = new Date(istNow);
+
+  const marketOpen = new Date(istNow);
   marketOpen.setHours(9, 15, 0, 0);
 
-  const marketClose = new Date(now);
+  const marketClose = new Date(istNow);
   marketClose.setHours(15, 30, 0, 0);
 
   // Before market open
-  if (now < marketOpen) {
+  if (istNow < marketOpen) {
     console.log("Waiting for market open");
-    return marketOpen - now;
+    return marketOpen - istNow;
   }
 
   // After market close
-  if (now >= marketClose) {
+  if (istNow >= marketClose) {
     const tomorrowOpen = new Date(marketOpen);
     tomorrowOpen.setDate(tomorrowOpen.getDate() + 1);
 
     console.log("Market closed, scheduling tomorrow");
-    return tomorrowOpen - now;
+    return tomorrowOpen - istNow;
   }
 
   next.setSeconds(2);
@@ -68,18 +73,18 @@ export function getNextRun() {
   const startMinutes = 15;
   const interval = TIMEFRAME;
 
-  const minutes = now.getMinutes();
+  const minutes = istNow.getMinutes();
 
   const blocks = Math.ceil((minutes - startMinutes) / interval);
   const nextMinute = startMinutes + blocks * interval;
 
   next.setMinutes(nextMinute);
 
-  if (next <= now) next.setMinutes(next.getMinutes() + interval);
+  if (next <= istNow) next.setMinutes(next.getMinutes() + interval);
 
-  const delay = next - now;
+  const delay = next - istNow;
 
-  console.log("Current Time:", now.toLocaleTimeString());
+  console.log("Current Time:", istNow.toLocaleTimeString());
   console.log("Next Run:", next.toLocaleTimeString());
 
   return delay;

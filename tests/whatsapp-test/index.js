@@ -7,7 +7,7 @@ cron.schedule("* * * * *", async () => {
 
   const time = new Date().toLocaleTimeString();
 
-  const msg = `🚀 RELIANCE: Bullish MACD Cross\nTime: ${time}`;
+  const msg = `Test Message\nTime: ${time}`;
 
   await sendMessage(msg);
 
