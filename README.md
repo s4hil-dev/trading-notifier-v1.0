@@ -8,4 +8,3 @@ In local,
     1. Test messaging
     2. Test DB not (required daily)
     3. Put new groww token
-    
