@@ -3,12 +3,14 @@ import { sendMessage } from "./sendMessage.js";
 
 console.log("Bot started...");
 
-cron.schedule("* * * * *", async () => {
+// cron.schedule("* * * * *", async () => {
 
-  const time = new Date().toLocaleTimeString();
+//   const time = new Date().toLocaleTimeString();
 
-  const msg = `Test Message\nTime: ${time}`;
+//   const msg = `Test Message\nTime: ${time}`;
 
-  await sendMessage(msg);
+//   await sendMessage(msg);
 
-});
+// });
+
+sendMessage('Test message');
