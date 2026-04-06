@@ -1,0 +1,5 @@
+export const commodities = [
+    CRUDEOILM18MAY26FUT,
+    GOLDM05MAY26FUT,
+    NATGASMINI26MAY26FUT
+]

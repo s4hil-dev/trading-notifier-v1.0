@@ -20,8 +20,8 @@ export async function fetchHistoricalCandles(symbol) {
     "https://api.groww.in/v1/historical/candle/range",
     {
       params: {
-        exchange: "NSE",
-        segment: "CASH",
+        exchange: "MCX",
+        segment: "COMMODITY",
         trading_symbol: symbol,
         interval_in_minutes: TIMEFRAME,
         start_time: formatIST(start),
@@ -34,6 +34,9 @@ export async function fetchHistoricalCandles(symbol) {
       }
     }
   );
+  console.log(res.data.payload.candles);
   
   return res.data.payload.candles;
 }
+
+fetchHistoricalCandles("CRUDEOILM18MAY26FUT")
