@@ -66,12 +66,11 @@ export function getNextRun() {
     console.log("Market closed, scheduling tomorrow");
     return tomorrowOpen - istNow;
   }
-  
-  next.setMinutes(5)
+
   next.setSeconds(2);
   next.setMilliseconds(0);
 
-  const startMinutes = 15;
+  const startMinutes = 20;
   const interval = TIMEFRAME;
 
   const minutes = istNow.getMinutes();

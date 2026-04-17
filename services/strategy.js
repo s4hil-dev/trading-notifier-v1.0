@@ -5,7 +5,7 @@ export function checkMACD(queue) {
   const [m3, m2, m1] = queue;
 
   // Bullish: MACD crosses above 0
-  if (m1 > 0 && m2 < 0 && m3 < 0) {
+  if (m1 > 0 && m2 <= 0 && m3 < 0) {
     return "🟢 BULLISH";
   }
 
