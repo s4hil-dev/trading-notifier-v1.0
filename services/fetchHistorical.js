@@ -14,7 +14,7 @@ export async function fetchHistoricalCandles(symbol) {
   const end = new Date();
   const start = new Date(end);
 
-  start.setDate(end.getDate() - 7);
+  start.setDate(end.getDate() - 20);
 
   const res = await axios.get(
     "https://api.groww.in/v1/historical/candle/range",
