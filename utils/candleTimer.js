@@ -66,7 +66,8 @@ export function getNextRun() {
     console.log("Market closed, scheduling tomorrow");
     return tomorrowOpen - istNow;
   }
-
+  
+  next.setMinutes(5)
   next.setSeconds(2);
   next.setMilliseconds(0);
 

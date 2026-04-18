@@ -16,4 +16,4 @@ const indicatorSchema = new mongoose.Schema({
 
 });
 
-export default mongoose.model("Indicator", indicatorSchema);
+export default mongoose.model("Stocks", indicatorSchema);
