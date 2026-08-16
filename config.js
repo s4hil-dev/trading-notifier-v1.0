@@ -1,1 +1,1 @@
-export const TIMEFRAME = 15;   // change to 15 later
+export const TIMEFRAME = 60;   // change to 15 later
