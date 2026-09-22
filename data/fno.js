@@ -1,6 +1,5 @@
-export const stocks = [
-  // "NIFTY",
-  // "BANKNIFTY"
+export const fno = [
+  
   "360ONE",
   "ABB",
   "APLAPOLLO",

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import { stocks } from "./data/stocks.js";
 import { bootstrap } from "./services/bootstrap.js";
 import { startScheduler } from "./scheduler.js";
+import { stocks } from "./config.js";
 
 import 'dotenv/config'
 

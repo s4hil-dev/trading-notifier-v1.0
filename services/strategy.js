@@ -10,9 +10,9 @@ export function checkMACD(queue) {
   }
 
   // Bearish: MACD crosses below 0
-  if (m1 < 0 && m2 > 0 && m3 > 0) {
-    return "🔴 BEARISH";
-  }
+  // if (m1 < 0 && m2 > 0 && m3 > 0) {
+  //   return "🔴 BEARISH";
+  // }
 
 return null;
 }

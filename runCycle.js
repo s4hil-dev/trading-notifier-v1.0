@@ -2,9 +2,8 @@ import Indicator from "./models/indicatorModel.js";
 import { fetchLastCandle } from "./services/fetchLastCandle.js";
 import { updateMACD } from "./services/macdCalculator.js";
 import { checkMACD } from "./services/strategy.js";
-import { stocks } from "./data/stocks.js";
 import 'dotenv/config';
-import { TIMEFRAME } from "./config.js";
+import { stocks, TIMEFRAME } from "./config.js";
 import { sendMessage } from "./tests/whatsapp-test/sendMessage.js";
 import { queueAlert } from "./queues/alertQueue.js";
 
